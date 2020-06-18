@@ -5,4 +5,3 @@ const recursiveRange = (num) => {
   return num + recursiveRange(num - 1);
 };
 
-console.log(recursiveRange(10));

@@ -18,4 +18,3 @@ const capitalizeWords = (arr) => {
 
 let words = ["i", "am", "learning", "recursion"];
 
-console.log(capitalizeWords(words));

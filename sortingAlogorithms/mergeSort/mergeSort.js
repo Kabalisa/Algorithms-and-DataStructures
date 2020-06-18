@@ -29,4 +29,3 @@ function mergeSort(arr) {
   return mergeFunc(left, right);
 }
 
-console.log(mergeSort(10, 24, 76, 73));

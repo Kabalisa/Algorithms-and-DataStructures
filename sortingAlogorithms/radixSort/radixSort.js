@@ -28,4 +28,3 @@ const radixSort = (nums) => {
   return nums;
 };
 
-console.log(radixSort([2,1]));

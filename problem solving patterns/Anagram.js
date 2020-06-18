@@ -34,5 +34,3 @@ function ValidAnagram(string1, string2) {
     }
     return true;
 }
-
-console.log(ValidAnagram('azbz','zza'));

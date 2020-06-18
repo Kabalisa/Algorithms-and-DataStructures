@@ -18,7 +18,7 @@ function uniqueValues (arr) {
     return first + 1;
 }
 // update a pointer only at a certain condition.
-console.log(uniqueValues([1,2,3,1]));
+
 //           j
 // 1,4,5,6,8,9,9
 //             j

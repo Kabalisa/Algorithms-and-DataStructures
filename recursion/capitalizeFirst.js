@@ -31,4 +31,3 @@ const capitalizeFirst = (arr) => {
   return newArr;
 };
 
-console.log(capitalizeFirst(["car", "taco", "banana"]));

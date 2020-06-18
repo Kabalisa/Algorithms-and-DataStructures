@@ -17,4 +17,3 @@ const naiveStringSearch = (string1, string2) => {
   return count;
 };
 
-console.log(naiveStringSearch("omgutomgksgmsdomg", "omg"));

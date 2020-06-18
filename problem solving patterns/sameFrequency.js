@@ -34,5 +34,3 @@ const sameFrequency = (num1, num2) => {
     }
     return true;
 }
-
-console.log(sameFrequency(112, 211));

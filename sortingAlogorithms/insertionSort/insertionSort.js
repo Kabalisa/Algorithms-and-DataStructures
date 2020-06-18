@@ -11,4 +11,3 @@ function insertionSort(arr) {
   return arr;
 }
 
-insertionSort([3, 2, 1]);

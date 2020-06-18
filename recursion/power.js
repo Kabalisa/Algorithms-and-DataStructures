@@ -7,4 +7,3 @@ const power = (base, ex) => {
   return base * power(base, ex - 1);
 };
 
-console.log(power(2, 4));

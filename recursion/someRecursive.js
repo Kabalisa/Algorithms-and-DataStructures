@@ -12,4 +12,3 @@ const someRecursive = (arr, isOdd) => {
   return someRecursive(arr.slice(1), isOdd);
 };
 
-console.log(someRecursive([2, 1], odd));

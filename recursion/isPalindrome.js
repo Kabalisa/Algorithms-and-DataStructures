@@ -16,4 +16,3 @@ const isPalindrome = (str) => {
     return str === newStr;
 };
 
-console.log(isPalindrome("lolo"));

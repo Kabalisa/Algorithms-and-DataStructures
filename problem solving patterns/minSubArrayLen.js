@@ -30,7 +30,6 @@ const minSubArrayLen = (nums, sum) => {
     return minLen === Infinity ? 0 : minLen;
 }
 
-console.log(minSubArrayLen([3,2,1],1));
 
 //if the sum is not yet achievend continue incrementing end
 //if the sum is achieved, measure length, substract the first element, record sum and increment start.

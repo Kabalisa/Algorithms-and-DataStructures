@@ -6,4 +6,3 @@ const linearSearch = (arr, val) => {
   }
   return -1;
 };
-console.log(linearSearch([10, 15, 20, 25, 30, 35], 15));

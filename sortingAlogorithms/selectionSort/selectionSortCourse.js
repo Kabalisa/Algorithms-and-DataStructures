@@ -35,4 +35,3 @@ function selectionSort(arr) {
   return arr;
 }
 
-selectionSort([0, 2, 34, 22, 10, 19, 17]);

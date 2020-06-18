@@ -18,5 +18,3 @@ const areThereDuplicates = (...args) => {
 
     return false;
 }
-
-console.log(areThereDuplicates(1,2,4,4));

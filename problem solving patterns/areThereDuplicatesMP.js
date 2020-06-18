@@ -49,5 +49,3 @@ const areThereDuplicatesMP = (...args) => {
 }
 
 //multiple pointer pattern works only for sorted data!!
-
-console.log(areThereDuplicatesMP(1,2,3,1));

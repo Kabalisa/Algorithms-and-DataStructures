@@ -20,4 +20,3 @@ const selectionSort = (arr) => {
   return arr;
 };
 
-console.log(selectionSort([4, 1, 5, 35, 0, 44, 6]));

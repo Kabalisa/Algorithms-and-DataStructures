@@ -27,7 +27,5 @@ let obj = {
   },
 };
 
-console.log(stringifyNumbers(obj));
-
 //toString.call(obj[el]) === "[object Object]"
 //Object.keys(obj).length

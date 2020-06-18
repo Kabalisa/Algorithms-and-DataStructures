@@ -10,4 +10,3 @@ const flatten = (oldArr) => {
   return newArr;
 };
 
-console.log(flatten([5, [[[1], [[[2]]], [[[[[[[3]]]]]]]]]]));

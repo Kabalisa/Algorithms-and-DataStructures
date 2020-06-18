@@ -7,4 +7,3 @@ const arr = (array) => {
   return array[0] * arr(array.slice(1));
 };
 
-console.log(arr([1, 2, 3]));

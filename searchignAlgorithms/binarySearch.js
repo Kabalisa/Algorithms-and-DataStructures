@@ -21,4 +21,3 @@ const binarySearch = (arr, val) => {
   return -1;
 };
 
-console.log(binarySearch([1, 2, 3, 4, 5], 5));

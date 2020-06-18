@@ -29,4 +29,4 @@ const obj = {
   },
 };
 
-console.log(collectStrings(obj));
+

@@ -26,8 +26,6 @@ const isSubsequence = (str1, str2) => {
  return false;
 }
 
-console.log(isSubsequence('sing', 'sting'));
-
 //syntatically simple but the same (look back refactor)
 // function isSubsequence(str1, str2) {
 //     var i = 0;

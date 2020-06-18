@@ -36,4 +36,3 @@ const obj2 = {
   e: { e: { e: 2 }, ee: "car" },
 };
 
-console.log(nestedEvenSum(obj2));
