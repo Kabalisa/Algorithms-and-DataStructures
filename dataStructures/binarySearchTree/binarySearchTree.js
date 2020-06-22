@@ -70,5 +70,74 @@ class BinarySearchTree {
       return false;
     }
   }
+
+  bfs() {
+    let queue = [this.root];
+    let visited = [];
+    let node;
+    while (queue.length !== 0) {
+      node = queue.shift();
+      visited.push(node.value);
+      if (node.left) {
+        queue.push(node.left);
+      }
+      if (node.right) {
+        queue.push(node.right);
+      }
+    }
+    return visited;
+  }
+
+  dfsPreOrder() {
+    let visited = [];
+    let current = this.root;
+
+    const traverse = (node) => {
+      visited.push(node.value);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    };
+
+    traverse(current);
+    return visited;
+  }
+
+  dfsPostOrder() {
+    let visited = [];
+    let current = this.root;
+
+    const traverse = (node) => {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      visited.push(node.value);
+    };
+
+    traverse(current);
+    return visited;
+  }
+
+  dfsInOrder() {
+    let visited = [];
+    let current = this.root;
+
+    const traverse = (node) => {
+      if (node.left) traverse(node.left);
+      visited.push(node.value);
+      if (node.right) traverse(node.right);
+    };
+
+    traverse(current);
+    return visited;
+  }
 }
 
+let tree = new BinarySearchTree();
+
+tree.insert(10);
+tree.insert(6);
+tree.insert(3);
+tree.insert(8);
+tree.insert(15);
+tree.insert(20);
+
+console.log(tree.dfsInOrder());
