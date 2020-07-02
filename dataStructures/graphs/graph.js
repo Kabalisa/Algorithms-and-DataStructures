@@ -9,7 +9,7 @@ class Graph {
 
   addEdge(vertex1, vertex2) {
     if (this.adjacencyList[vertex1]) this.adjacencyList[vertex1].push(vertex2);
-    if (this.adjacencyList[vertex1]) this.adjacencyList[vertex2].push(vertex1);
+    if (this.adjacencyList[vertex2]) this.adjacencyList[vertex2].push(vertex1);
   }
 
   removeEdge(vertex1, vertex2) {
@@ -35,17 +35,79 @@ class Graph {
       delete this.adjacencyList[vertex];
     }
   }
+
+  DFSRecursive(startingNode) {
+    let result = [];
+    let visited = {};
+
+    const DFS = (vertex) => {
+      if (!vertex) return undefined;
+      visited[vertex] = true;
+      result.push(vertex);
+      for (let element of this.adjacencyList[vertex]) {
+        if (!visited[element]) DFS(element);
+      }
+    };
+
+    DFS(startingNode);
+    return result;
+  }
+
+  DFSIterative(startingNode) {
+    let s = [];
+    let result = [];
+    let visited = {};
+    let vertex;
+    s.push(startingNode);
+    while (s.length) {
+      vertex = s.pop();
+      if (!visited[vertex]) {
+        visited[vertex] = true;
+        result.push(vertex);
+        s = [...s, ...this.adjacencyList[vertex]];
+      }
+    }
+    return result;
+  }
+
+  BFS(startingNode) {
+    let queue = [startingNode];
+    let result = [];
+    let visited = {};
+    visited[startingNode] = true;
+    while (queue.length) {
+      let vertex = queue.shift();
+      result.push(vertex);
+      this.adjacencyList[vertex].forEach((element) => {
+        if (!visited[element]) {
+          visited[element] = true;
+          queue.push(element);
+        }
+      });
+    }
+    return result;
+  }
 }
 
-let graph = new Graph();
-graph.addVertex("trapback");
-graph.addVertex("animal");
-graph.addVertex("undrunk");
-graph.addVertex("gocrazy");
-graph.addEdge("gocrazy", "trapback");
-graph.addEdge("animal", "undrunk");
-graph.addEdge("gocrazy", "undrunk");
+// let graph = new Graph();
+// graph.addVertex("A");
+// graph.addVertex("B");
+// graph.addVertex("C");
+// graph.addVertex("D");
+// graph.addVertex("E");
+// graph.addVertex("F");
+// graph.addEdge("A", "B");
+// graph.addEdge("A", "C");
+// graph.addEdge("B", "D");
+// graph.addEdge("C", "E");
+// graph.addEdge("D", "E");
+// graph.addEdge("D", "F");
+// graph.addEdge("E", "F");
 // graph.removeEdge("gocrazy", "undrunk");
-graph.removeVertex("gocrazy");
+// graph.removeVertex("gocrazy");
 
-console.log(graph.adjacencyList);
+// console.log(graph.adjacencyList);
+// console.log(graph.DFSRecursive("A"));
+// console.log(graph.DFSIterative("A"));
+// console.log(graph.BFS("A"));
+
